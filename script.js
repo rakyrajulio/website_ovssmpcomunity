@@ -1,22 +1,29 @@
 console.log("Website Minecraft siap jalan!");
 
 const sidebar = document.querySelector('.sidebar');
-const toggle = document.getElementById('sidebarToggle');
+const toggleBtn = document.getElementById('sidebarToggle');
 const closeBtn = document.getElementById('sidebarClose');
 
-toggle.addEventListener('click', () => {
-  sidebar.classList.toggle('active');
-
-  // Sembunyikan hamburger saat sidebar terbuka
-  if (sidebar.classList.contains('active')) {
-    toggle.style.opacity = 0;
-  } else {
-    toggle.style.opacity = 1;
-  }
+// Buka sidebar saat klik hamburger
+toggleBtn.addEventListener('click', () => {
+  sidebar.classList.add('active');
+  toggleBtn.style.display = 'none'; // tombol hilang
 });
 
+// Tutup sidebar saat klik tombol ×
 closeBtn.addEventListener('click', () => {
   sidebar.classList.remove('active');
-  toggle.style.opacity = 1; // tampilkan kembali hamburger
+  toggleBtn.style.display = 'block'; // tombol muncul kembali
 });
 
+// Tutup sidebar saat klik di luar
+document.addEventListener('click', (e) => {
+  if (
+    sidebar.classList.contains('active') &&
+    !sidebar.contains(e.target) &&
+    !toggleBtn.contains(e.target)
+  ) {
+    sidebar.classList.remove('active');
+    toggleBtn.style.display = 'block'; // tombol muncul lagi
+  }
+});
