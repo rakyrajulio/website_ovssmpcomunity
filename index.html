@@ -3,56 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Website OVS Minecraft</title>
+  <title>Mythoria sekai x OVS - Dashboard</title>
   <link rel="stylesheet" href="style.css">
-
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="images/logo.png">
 </head>
 <body>
-  <!-- Tombol Hamburger (Sidebar Toggle) -->
-  <button id="sidebarToggle" class="hamburger-btn" aria-label="Toggle Sidebar">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
+
+ <!-- Tombol Hamburger -->
+<button id="sidebarToggle" class="hamburger-btn">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
 
   <!-- Sidebar -->
   <aside class="sidebar">
     <div class="sidebar-header">
       <div class="logo">
-        <img src="images/logo.png" alt="Logo Komunitas" />
-        <h2>OVS SMP</h2>
+        <img src="images/logo.png" alt="Logo">
+        <h2>Mythoria sekai x OVS</h2>
       </div>
-      <button id="sidebarClose" class="close-btn" aria-label="Close Sidebar">×</button>
+      <button id="sidebarClose" class="close-btn">×</button>
     </div>
-
-    <ul>
+    <ul class="sidebar-menu">
       <li><a href="index.html">🏠 Dashboard</a></li>
       <li><a href="about.html">ℹ️ About</a></li>
       <li><a href="gallery.html">🖼️ Gallery</a></li>
-      <li><a href="support.html">💰 Support/Donasi</a></li>
-      <li><a href="https://discord.gg/KT9AT2e4TN" target="_blank" class="discord-btn">💬 Discord</a></li>
+      <li><a href="support.html">💰 Support</a></li>
     </ul>
+    <div class="sidebar-bottom">
+      <a href="https://discord.gg/KT9AT2e4TN" target="_blank" class="discord-btn">💬 Discord</a>
+      <a href="https://trakteer.id/ovssmp/tip" target="_blank" class="trakteer-btn">☕ Trakteer</a>
+    </div>
   </aside>
 
-  <!-- Main Content -->
+  <!-- Main -->
   <main class="main">
-    <!-- Welcome Section -->
     <section class="welcome">
-      <h2>👋 Selamat Datang di OVS SMP</h2>
-      <p>Bergabunglah dengan dunia survival penuh petualangan dan komunitas yang ramah. Bangun, bertani, dan jelajahi bersama teman baru!</p>
-
-      <!-- Banner -->
-      <div class="welcome-banner">
+      <div class="card welcome-card">
+        <h2>👋 Selamat Datang di OVS SMP</h2>
+        <p>Bergabunglah dengan dunia survival penuh petualangan dan komunitas yang ramah!</p>
         <img src="images/banner.png" alt="Banner OVS SMP">
       </div>
     </section>
 
-    <!-- Coming Soon Events -->
     <section class="events">
       <h3>📅 Event Mendatang</h3>
-      <div class="event-card">
+      <div class="card event-card">
         <h4>🎣 Kontes Memancing</h4>
         <p>Tanggal: Coming Soon</p>
         <p>Tunjukkan skill memancingmu dan raih hadiah spesial!</p>
@@ -60,12 +57,9 @@
     </section>
   </main>
 
-  <!-- Footer -->
   <footer class="site-footer">
-    © 2025 Reqi • All Rights Reserved
+    © 2025 Mythoria Sekai X OVS • All Rights Reserved
   </footer>
-
-  <!-- Script -->
   <script src="script.js"></script>
 </body>
 </html>
